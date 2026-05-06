@@ -6,21 +6,14 @@ import { motion } from "framer-motion";
 import { brandContent } from "@/content/brand-content";
 import { SiteHeader } from "@/components/landing/site-header";
 import { TrackedLink } from "@/components/landing/tracked-link";
+import { LightRays } from "@/components/react-bits/light-rays";
 import { siteConfig } from "@/lib/site";
-
-const badges = [
-  "Bienes raíces premium",
-  "Inversiones con criterio",
-  "Avalúos y administración integral",
-];
 
 const heroMetrics = [
   { value: "14+", label: "años de experiencia" },
   { value: "360°", label: "visión legal y financiera" },
   { value: "Directo", label: "acompañamiento ejecutivo" },
 ];
-
-const heroSignals = ["Antioquia", "Propiedad horizontal", "Respuesta cercana"];
 
 export function Hero() {
   return (
@@ -41,34 +34,42 @@ export function Hero() {
         }}
       />
       <div className="absolute inset-0 bg-black/25" />
+      <div className="absolute inset-0 opacity-70 mix-blend-screen">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#F97316"
+          raysSpeed={0.7}
+          lightSpread={0.62}
+          rayLength={2.4}
+          followMouse
+          mouseInfluence={0.08}
+          noiseAmount={0.04}
+          distortion={0.035}
+          fadeDistance={1.05}
+          saturation={1}
+        />
+      </div>
 
       <SiteHeader page="home" />
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col justify-center px-6 pb-8 pt-10 sm:px-10 sm:pt-14 md:pb-10 lg:min-h-[calc(100svh-104px)] lg:px-12 lg:pb-12 lg:pt-16 xl:pt-20">
 
-        <div className="grid items-center gap-8 py-6 md:gap-10 md:py-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 lg:py-10 xl:grid-cols-[1.15fr_0.85fr]">
-          <div className="max-w-3xl">
+        <div className="grid items-center gap-8 py-6 md:gap-10 md:py-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12 lg:py-10 xl:grid-cols-[1.08fr_0.92fr]">
+          <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="mb-5 flex flex-wrap gap-2 sm:mb-6 sm:gap-3"
+              className="mx-auto mb-5 inline-flex rounded-full border border-white/10 bg-white/[0.08] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/70 backdrop-blur-xl lg:mx-0"
             >
-              {badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="rounded-full border border-white/10 bg-white/[0.08] px-3 py-2 text-[10px] font-medium uppercase tracking-[0.18em] text-white/70 backdrop-blur-xl sm:px-4 sm:text-xs sm:tracking-[0.22em]"
-                >
-                  {badge}
-                </span>
-              ))}
+              Administración de propiedad horizontal desde 2012
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="max-w-4xl text-[clamp(2.25rem,9vw,4.8rem)] font-semibold tracking-[-0.04em] text-white lg:text-6xl xl:text-7xl"
+              className="mx-auto max-w-4xl text-[clamp(2.25rem,9vw,4.8rem)] font-semibold tracking-[-0.04em] text-white lg:mx-0 lg:text-6xl xl:text-7xl"
             >
               {brandContent.company.tagline}
             </motion.h1>
@@ -77,7 +78,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="mt-4 max-w-2xl text-base leading-7 text-white/[0.72] sm:mt-5 sm:text-lg sm:leading-8 lg:text-lg xl:text-xl"
+              className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/[0.72] sm:mt-5 sm:text-lg sm:leading-8 lg:mx-0 lg:text-lg xl:text-xl"
             >
               {brandContent.company.shortDescription}
             </motion.p>
@@ -86,7 +87,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.26, ease: "easeOut" }}
-              className="mt-5 grid grid-cols-3 gap-2 sm:mt-7 sm:gap-3 xl:grid-cols-3"
+              className="mx-auto mt-5 grid max-w-2xl grid-cols-3 gap-2 sm:mt-7 sm:gap-3 lg:mx-0 xl:grid-cols-3"
             >
               {heroMetrics.map((item) => (
                 <div
@@ -107,7 +108,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4"
+              className="mt-6 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4 lg:justify-start"
             >
               <TrackedLink
                 href="/servicios"
@@ -130,24 +131,6 @@ export function Hero() {
               </TrackedLink>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.38, ease: "easeOut" }}
-              className="mt-5 flex flex-wrap items-center gap-2 rounded-[1.5rem] border border-white/10 bg-white/[0.05] px-4 py-3 backdrop-blur-xl sm:mt-7 sm:gap-3 sm:rounded-full"
-            >
-              <span className="accent-text text-xs font-semibold uppercase tracking-[0.3em]">
-                Presencia premium
-              </span>
-              {heroSignals.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-[11px] uppercase tracking-[0.24em] text-white/70"
-                >
-                  {item}
-                </span>
-              ))}
-            </motion.div>
           </div>
 
             <motion.div

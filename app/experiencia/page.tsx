@@ -53,7 +53,7 @@ export default function ExperienciaPage() {
 
       <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
         <ScrollReveal className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+          <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
             Experiencia
           </p>
           <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
@@ -73,7 +73,7 @@ export default function ExperienciaPage() {
               key={project.name}
               className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 backdrop-blur-xl"
             >
-              <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+              <p className="accent-text text-xs uppercase tracking-[0.28em]">
                 {project.location}
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">
@@ -91,7 +91,7 @@ export default function ExperienciaPage() {
       <section className="mx-auto w-full max-w-7xl px-6 py-8 sm:px-10 lg:px-12">
         <div className="flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 backdrop-blur-xl lg:flex-row lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-400">
+            <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
               Contacto
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
@@ -100,7 +100,7 @@ export default function ExperienciaPage() {
           </div>
           <TrackedLink
             href="/contacto#formulario"
-            className="inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:bg-orange-400"
+            className="accent-bg accent-shadow inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-0.5"
             eventName="cta_experiencia_contacto"
             eventSection="experiencia"
           >

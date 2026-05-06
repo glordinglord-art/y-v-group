@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link, { type LinkProps } from "next/link";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 import { trackEvent } from "@/lib/analytics";
 
-type TrackedLinkProps = LinkProps & {
-  children: React.ReactNode;
+type TrackedLinkProps = LinkProps &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps> & {
+  children: ReactNode;
   className?: string;
   eventName: string;
   eventSection: string;
@@ -17,6 +19,7 @@ export function TrackedLink({
   className,
   eventName,
   eventSection,
+  onClick,
   ...props
 }: TrackedLinkProps) {
   return (
@@ -24,7 +27,10 @@ export function TrackedLink({
       <Link
         {...props}
         className={className}
-        onClick={() => trackEvent(eventName, { section: eventSection })}
+        onClick={(event) => {
+          trackEvent(eventName, { section: eventSection });
+          onClick?.(event);
+        }}
       >
         {children}
       </Link>

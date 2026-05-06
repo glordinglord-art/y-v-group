@@ -44,12 +44,12 @@ export const metadata: Metadata = {
 
 export default function CasosDeExitoPage() {
   return (
-    <main className="bg-[#0a0a0a] text-white">
+    <main className="theme-page">
       <SiteHeader page="home" />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
         <ScrollReveal className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+          <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
             Casos de exito
           </p>
           <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
@@ -69,13 +69,13 @@ export default function CasosDeExitoPage() {
             delay={index * 0.08}
             className="rounded-[2rem] border border-white/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.05),rgba(18,18,18,0.96))] p-8 backdrop-blur-xl"
           >
-            <p className="text-xs uppercase tracking-[0.3em] text-orange-300">Resultado</p>
+            <p className="accent-text text-xs uppercase tracking-[0.3em]">Resultado</p>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">
               {item.title}
             </h2>
             <p className="mt-4 text-base leading-7 text-zinc-300">{item.summary}</p>
             <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-black/20 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">
+              <p className="accent-text text-sm font-semibold uppercase tracking-[0.2em]">
                 Impacto
               </p>
               <p className="mt-3 text-base leading-7 text-zinc-200">{item.result}</p>
@@ -87,7 +87,7 @@ export default function CasosDeExitoPage() {
       <section className="mx-auto w-full max-w-7xl px-6 py-8 sm:px-10 lg:px-12">
         <ScrollReveal className="flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 backdrop-blur-xl lg:flex-row lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-400">
+            <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
               Preparado para crecer
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
@@ -96,7 +96,7 @@ export default function CasosDeExitoPage() {
           </div>
           <TrackedLink
             href="/contacto#formulario"
-            className="inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:bg-orange-400"
+            className="accent-bg accent-shadow inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-0.5"
             eventName="cta_cases_contact"
             eventSection="cases"
           >

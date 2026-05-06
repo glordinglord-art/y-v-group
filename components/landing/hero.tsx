@@ -16,7 +16,13 @@ const badges = [
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden border-b border-white/10">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(249,115,22,0.28),_transparent_30%),linear-gradient(135deg,_rgba(10,10,10,0.9),_rgba(24,24,27,0.76)_40%,_rgba(10,10,10,0.95))]" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at top right, rgb(var(--accent-rgb) / 0.28), transparent 30%), linear-gradient(135deg, rgba(10,10,10,0.9), rgba(24,24,27,0.76) 40%, rgba(10,10,10,0.95))",
+        }}
+      />
       <div
         className="absolute inset-0 opacity-40"
         style={{
@@ -101,7 +107,10 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
             className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
           >
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-300/80 to-transparent" />
+            <div
+              className="absolute inset-x-0 top-0 h-px"
+              style={{ background: "linear-gradient(to right, transparent, rgb(var(--accent-rgb) / 0.8), transparent)" }}
+            />
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#171717]">
               <Image
                 src="/hero-architecture.svg"
@@ -114,7 +123,7 @@ export function Hero() {
             </div>
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               <div className="rounded-[1.5rem] border border-white/10 bg-black/30 p-5">
-                <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+                <p className="accent-text text-xs uppercase tracking-[0.28em]">
                   Liderazgo
                 </p>
                 <p className="mt-3 text-2xl font-semibold text-white">
@@ -126,7 +135,7 @@ export function Hero() {
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5">
-                <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+                <p className="accent-text text-xs uppercase tracking-[0.28em]">
                   Cobertura
                 </p>
                 <p className="mt-3 text-2xl font-semibold text-white">

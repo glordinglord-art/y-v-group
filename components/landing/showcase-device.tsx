@@ -82,7 +82,7 @@ export function ShowcaseDevice() {
       <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="lg:py-24">
           <div className="lg:sticky lg:top-28">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+            <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
               Experiencia inmersiva
             </p>
             <h2 className="mt-5 text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
@@ -101,7 +101,7 @@ export function ShowcaseDevice() {
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                   className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl"
                 >
-                  <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+                  <p className="accent-text text-xs uppercase tracking-[0.28em]">
                     0{index + 1} {step.eyebrow}
                   </p>
                   <p className="mt-3 text-lg font-semibold text-white">{step.title}</p>
@@ -118,12 +118,15 @@ export function ShowcaseDevice() {
                 style={{ rotateX, rotateY, y }}
                 className="relative w-full max-w-[860px]"
               >
-                <div className="absolute inset-0 rounded-[2.75rem] bg-orange-500/20 blur-3xl" />
+                <div
+                  className="absolute inset-0 rounded-[2.75rem] blur-3xl"
+                  style={{ backgroundColor: "rgb(var(--accent-rgb) / 0.2)" }}
+                />
                 <div className="relative rounded-[2.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(14,14,14,0.98))] p-4 shadow-[0_40px_100px_rgba(0,0,0,0.48)] backdrop-blur-2xl">
                   <div className="rounded-[2.1rem] border border-white/10 bg-[#0f0f10] p-4">
                     <div className="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-white/[0.04] px-5 py-4">
                       <div>
-                        <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+                        <p className="accent-text text-xs uppercase tracking-[0.28em]">
                           Y.V. Group Interface
                         </p>
                         <motion.p
@@ -134,14 +137,20 @@ export function ShowcaseDevice() {
                         </motion.p>
                       </div>
                       <div className="flex gap-2">
-                        <span className="h-3 w-3 rounded-full bg-orange-400" />
+                        <span className="accent-bg h-3 w-3 rounded-full" />
                         <span className="h-3 w-3 rounded-full bg-white/30" />
                         <span className="h-3 w-3 rounded-full bg-white/15" />
                       </div>
                     </div>
 
                     <div className="mt-4 grid gap-4 lg:grid-cols-[0.62fr_0.38fr]">
-                      <div className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(160deg,rgba(249,115,22,0.16),rgba(20,20,20,0.96)_56%,rgba(10,10,10,1))] p-6">
+                      <div
+                        className="rounded-[1.75rem] border border-white/10 p-6"
+                        style={{
+                          background:
+                            "linear-gradient(160deg, rgb(var(--accent-rgb) / 0.16), rgba(20,20,20,0.96) 56%, rgba(10,10,10,1))",
+                        }}
+                      >
                         {steps.map((step, index) => (
                           <motion.div
                             key={step.title}
@@ -156,14 +165,20 @@ export function ShowcaseDevice() {
                           >
                             <div className="flex items-end justify-between gap-4">
                               <div>
-                                <p className="text-xs uppercase tracking-[0.28em] text-orange-200/80">
+                                <p className="text-xs uppercase tracking-[0.28em] text-white/70">
                                   {step.eyebrow}
                                 </p>
                                 <h3 className="mt-3 max-w-sm text-3xl font-semibold tracking-[-0.04em] text-white">
                                   {step.title}
                                 </h3>
                               </div>
-                              <div className="hidden h-28 w-28 rounded-full border border-orange-300/30 bg-orange-500/10 lg:block" />
+                              <div
+                                className="hidden h-28 w-28 rounded-full border lg:block"
+                                style={{
+                                  borderColor: "rgb(var(--accent-rgb) / 0.3)",
+                                  backgroundColor: "rgb(var(--accent-rgb) / 0.1)",
+                                }}
+                              />
                             </div>
 
                             <p className="mt-5 max-w-lg text-base leading-7 text-zinc-300">
@@ -198,7 +213,7 @@ export function ShowcaseDevice() {
                             className={activeIndex === index ? "grid gap-4" : "hidden"}
                           >
                             <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5">
-                              <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+                              <p className="accent-text text-xs uppercase tracking-[0.28em]">
                                 {step.primaryMetricLabel}
                               </p>
                               <p className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white">
@@ -207,7 +222,7 @@ export function ShowcaseDevice() {
                               <p className="mt-2 text-sm text-zinc-400">{step.panelTitle}</p>
                             </div>
                             <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5">
-                              <p className="text-xs uppercase tracking-[0.28em] text-orange-300">
+                              <p className="accent-text text-xs uppercase tracking-[0.28em]">
                                 {step.secondaryMetricLabel}
                               </p>
                               <p className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white">

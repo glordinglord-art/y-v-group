@@ -45,7 +45,7 @@ export function Services() {
   return (
     <section id="servicios" className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
       <div className="mb-12 flex max-w-3xl flex-col gap-5">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+        <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
           Portafolio de servicios
         </p>
         <h2 className="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
@@ -69,11 +69,22 @@ export function Services() {
               delay: index * 0.08,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.045] p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-orange-400/50 hover:bg-white/[0.07] hover:shadow-[0_20px_45px_rgba(249,115,22,0.14)]"
+            className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.045] p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]"
+            style={{ boxShadow: "0 20px 45px rgb(var(--accent-rgb) / 0.14)" }}
           >
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-400/80 to-transparent opacity-0 transition group-hover:opacity-100" />
+            <div
+              className="absolute inset-x-0 top-0 h-px opacity-0 transition group-hover:opacity-100"
+              style={{ background: "linear-gradient(to right, transparent, rgb(var(--accent-rgb) / 0.8), transparent)" }}
+            />
             <div className="flex items-start justify-between gap-4">
-              <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-orange-400/30 bg-orange-500/12 text-sm font-semibold tracking-[0.2em] text-orange-300">
+              <span
+                className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border text-sm font-semibold tracking-[0.2em]"
+                style={{
+                  borderColor: "rgb(var(--accent-rgb) / 0.3)",
+                  backgroundColor: "rgb(var(--accent-rgb) / 0.12)",
+                  color: "var(--accent)",
+                }}
+              >
                 {service.icon}
               </span>
               <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-white/45">

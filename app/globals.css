@@ -69,6 +69,24 @@ body {
   border-color: rgb(var(--accent-rgb) / 0.52);
 }
 
+.accent-link {
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.accent-link:hover {
+  color: var(--accent);
+}
+
+.accent-focus:focus {
+  border-color: rgb(var(--accent-rgb) / 0.4);
+  box-shadow: 0 0 0 4px rgb(var(--accent-rgb) / 0.12);
+}
+
 .theme-heading {
   color: var(--foreground);
 }

@@ -61,7 +61,8 @@ export function ThemeCustomizer() {
       className="fixed bottom-4 right-4 z-[110] sm:bottom-auto sm:right-4 sm:top-24"
     >
       <motion.div
-        animate={{ width: open ? "auto" : 56 }}
+        animate={{ width: open ? 244 : 56 }}
+        transition={{ type: "spring", stiffness: 280, damping: 28 }}
         className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/50 p-2 shadow-[0_24px_60px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
       >
         <div className="flex items-center gap-2">
@@ -69,6 +70,7 @@ export function ThemeCustomizer() {
             type="button"
             onClick={() => setOpen((value) => !value)}
             aria-label={open ? "Minimizar panel" : "Abrir panel"}
+            aria-expanded={open}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white/80 transition hover:bg-white/[0.1]"
           >
             {open ? "-" : "+"}

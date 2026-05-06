@@ -1,10 +1,10 @@
 'use client'
 
-import { motion } from "framer-motion";
+import { motion, type HTMLMotionProps } from "framer-motion";
+import type { ReactNode } from "react";
 
-type ScrollRevealProps = {
-  children: React.ReactNode;
-  className?: string;
+type ScrollRevealProps = Omit<HTMLMotionProps<"div">, "children"> & {
+  children: ReactNode;
   delay?: number;
   y?: number;
 };
@@ -14,9 +14,11 @@ export function ScrollReveal({
   className,
   delay = 0,
   y = 28,
+  ...props
 }: ScrollRevealProps) {
   return (
     <motion.div
+      {...props}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

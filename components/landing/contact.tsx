@@ -47,7 +47,7 @@ export function Contact() {
             <a
               href={siteConfig.phoneHref}
               onClick={() => trackEvent("click_phone", { section: "contacto" })}
-              className="mt-3 block text-2xl font-semibold text-white transition hover:accent-text"
+              className="accent-link mt-3 block text-2xl font-semibold text-white"
             >
               {siteConfig.phone.replace("+57 ", "")}
             </a>
@@ -59,7 +59,7 @@ export function Contact() {
             <a
               href={`mailto:${siteConfig.email}`}
               onClick={() => trackEvent("click_email", { section: "contacto" })}
-              className="mt-3 block text-xl font-semibold text-white transition hover:accent-text"
+              className="accent-link mt-3 block text-xl font-semibold text-white"
             >
               {siteConfig.email}
             </a>
@@ -116,7 +116,7 @@ export function Contact() {
               name="name"
               required
               placeholder="Tu nombre"
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
+              className="accent-focus rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none placeholder:text-zinc-500"
             />
           </label>
           <label className="grid gap-3">
@@ -126,7 +126,7 @@ export function Contact() {
               name="email"
               required
               placeholder="tu@correo.com"
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
+              className="accent-focus rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none placeholder:text-zinc-500"
             />
           </label>
           <label className="grid gap-3">
@@ -135,7 +135,7 @@ export function Contact() {
               type="tel"
               name="phone"
               placeholder="Tu telefono"
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
+              className="accent-focus rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none placeholder:text-zinc-500"
             />
           </label>
           <label className="grid gap-3">
@@ -143,7 +143,7 @@ export function Contact() {
             <select
               name="interest"
               defaultValue=""
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition focus:accent-border"
+              className="accent-focus rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none"
             >
               <option value="" disabled>
                 Selecciona una opcion
@@ -161,7 +161,7 @@ export function Contact() {
               rows={6}
               required
               placeholder="Cuantame que necesitas y te contactaremos pronto."
-              className="rounded-[1.5rem] border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
+              className="accent-focus rounded-[1.5rem] border border-white/10 bg-black/20 px-5 py-4 text-white outline-none placeholder:text-zinc-500"
             />
           </label>
           <button

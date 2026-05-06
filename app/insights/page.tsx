@@ -43,12 +43,12 @@ export const metadata: Metadata = {
 
 export default function InsightsPage() {
   return (
-    <main className="bg-[#0a0a0a] text-white">
+    <main className="theme-page">
       <SiteHeader page="home" />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
         <ScrollReveal className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+          <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
             Insights
           </p>
           <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
@@ -67,7 +67,7 @@ export default function InsightsPage() {
             delay={index * 0.08}
             className="rounded-[2rem] border border-white/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.05),rgba(18,18,18,0.96))] p-8 backdrop-blur-xl"
           >
-            <p className="text-xs uppercase tracking-[0.3em] text-orange-300">{item.tag}</p>
+            <p className="accent-text text-xs uppercase tracking-[0.3em]">{item.tag}</p>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">
               {item.title}
             </h2>

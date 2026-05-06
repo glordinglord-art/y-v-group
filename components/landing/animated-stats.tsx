@@ -40,7 +40,7 @@ function Counter({ value, suffix, label }: Stat) {
     <div ref={ref} className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl">
       <p className="text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
         {display.toLocaleString("es-CO")}
-        <span className="text-orange-400">{suffix}</span>
+        <span className="accent-text">{suffix}</span>
       </p>
       <p className="mt-3 text-sm uppercase tracking-[0.22em] text-zinc-400">
         {label}

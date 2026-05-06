@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -37,7 +37,8 @@ export function SiteHeader({ page }: SiteHeaderProps) {
   const { scrollY } = useScroll();
 
   const backgroundColor = useTransform(scrollY, [0, 120], ["rgba(0,0,0,0.28)", "rgba(8,8,8,0.82)"]);
-  const borderColor = useTransform(scrollY, [0, 120], ["rgba(255,255,255,0.10)", "rgba(249,115,22,0.22)"]);
+  const borderOpacity = useTransform(scrollY, [0, 120], [0.1, 0.22]);
+  const borderColor = useMotionTemplate`rgb(var(--accent-rgb) / ${borderOpacity})`;
   const boxShadow = useTransform(scrollY, [0, 120], ["0 0 0 rgba(0,0,0,0)", "0 24px 60px rgba(0,0,0,0.28)"]);
 
   return (

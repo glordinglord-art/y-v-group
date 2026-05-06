@@ -1,65 +1,165 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+
+import { AnimatedStats } from "@/components/landing/animated-stats";
+import { Hero } from "@/components/landing/hero";
+import { ScrollReveal } from "@/components/landing/scroll-reveal";
+import { SiteFooter } from "@/components/landing/site-footer";
+import { TrackedLink } from "@/components/landing/tracked-link";
+import { WhatsAppFloat } from "@/components/landing/whatsapp-float";
+import { brandContent } from "@/content/brand-content";
+import { siteConfig } from "@/lib/site";
+
+const summaryCards = [
+  {
+    eyebrow: "Nosotros",
+    title: "La vision y el liderazgo que sostienen la marca.",
+    description:
+      "Conoce a Yiseth Velez, la mision, la vision 2030 y los valores que respaldan cada decision.",
+    href: "/nosotros",
+    eventName: "home_teaser_nosotros",
+  },
+  {
+    eyebrow: "Servicios",
+    title: "Un portafolio premium para administrar, asesorar y valorizar.",
+    description:
+      "Explora el detalle de administracion, mediacion, avaluos, control financiero y gestion documental.",
+    href: "/servicios",
+    eventName: "home_teaser_servicios",
+  },
+  {
+    eyebrow: "Experiencia",
+    title: "Proyectos y presencia visual que fortalecen la confianza.",
+    description:
+      "Mira proyectos destacados, piezas editoriales y experiencia aplicada en Antioquia.",
+    href: "/experiencia",
+    eventName: "home_teaser_experiencia",
+  },
+  {
+    eyebrow: "Contacto",
+    title: "Una ruta hecha para convertir visitas en conversaciones reales.",
+    description:
+      "Formulario, telefono, correo, WhatsApp y una pagina dedicada para cerrar con elegancia.",
+    href: "/contacto",
+    eventName: "home_teaser_contacto",
+  },
+];
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Y.V. Group",
+  alternateName: "Y.V. Group Real Estate, Investments & Appraisals",
+  description:
+    "Empresa de bienes raices, inversiones, avaluos y administracion de propiedad horizontal liderada por Yiseth Velez.",
+  areaServed: "Antioquia, Colombia",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Antioquia",
+    addressCountry: "CO",
+  },
+  telephone: "+57 310 838 1590",
+  email: "gerencia@yvgroup.com.co",
+};
+
+export const metadata: Metadata = {
+  title: "Y.V. Group | Real Estate, Investments & Appraisals",
+  description:
+    "Landing principal de Y.V. Group en Antioquia. Descubre nosotros, servicios, experiencia y contacto desde una entrada premium y clara.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Y.V. Group | Bienes raices, inversiones y avaluos",
+    description:
+      "Inicio premium de Y.V. Group con acceso a servicios, experiencia, nosotros y contacto.",
+    url: siteConfig.url,
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="theme-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <WhatsAppFloat />
+
+      <Hero />
+      <AnimatedStats />
+
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-10 lg:px-12">
+        <ScrollReveal className="max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+            Inicio
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <h2 className="mt-5 text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
+            {brandContent.home.introTitle}
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
+            {brandContent.home.introDescription}
+          </p>
+        </ScrollReveal>
+      </section>
+
+      <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-8 sm:px-10 lg:grid-cols-2 lg:px-12">
+        {summaryCards.map((card, index) => (
+          <ScrollReveal
+            key={card.title}
+            delay={index * 0.06}
+            className="rounded-[2rem] border border-white/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.05),rgba(18,18,18,0.96))] p-8 backdrop-blur-xl"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            <p className="text-xs uppercase tracking-[0.3em] text-orange-300">{card.eyebrow}</p>
+            <h3 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">
+              {card.title}
+            </h3>
+            <p className="mt-4 text-base leading-7 text-zinc-300">{card.description}</p>
+            <div className="mt-8">
+              <TrackedLink
+                href={card.href}
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.05] px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-white transition hover:border-orange-400 hover:bg-orange-500/[0.12]"
+                eventName={card.eventName}
+                eventSection="home_summary"
+              >
+                Ver mas
+              </TrackedLink>
+            </div>
+          </ScrollReveal>
+        ))}
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-10 lg:px-12">
+        <ScrollReveal className="flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-orange-400/20 bg-[linear-gradient(135deg,rgba(249,115,22,0.14),rgba(18,18,18,0.9)_45%,rgba(10,10,10,1))] p-8 backdrop-blur-xl lg:flex-row lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">
+              Ruta recomendada
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
+              Si quieres una visita guiada, empieza por servicios y termina en contacto.
+            </h2>
+          </div>
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <TrackedLink
+              href="/servicios"
+              className="inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:bg-orange-400"
+              eventName="cta_home_servicios"
+              eventSection="home"
+            >
+              Ir a servicios
+            </TrackedLink>
+            <TrackedLink
+              href="/contacto"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.05] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition hover:border-orange-400 hover:text-orange-300"
+              eventName="cta_home_contacto"
+              eventSection="home"
+            >
+              Ir a contacto
+            </TrackedLink>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      <SiteFooter />
+    </main>
   );
 }

@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #080808;
+  --foreground: #f4f4f5;
+  --accent: #f97316;
+  --accent-rgb: 249 115 22;
+}
+
+html[data-theme="light"] {
+  --background: #f6f3ef;
+  --foreground: #161616;
 }
 
 @theme inline {
@@ -12,15 +19,44 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at top, rgb(var(--accent-rgb) / 0.12), transparent 22%),
+    linear-gradient(180deg, var(--background) 0%, color-mix(in srgb, var(--background) 94%, #000 6%) 35%, color-mix(in srgb, var(--background) 88%, #000 12%) 100%);
+}
+
+::selection {
+  background: rgb(var(--accent-rgb) / 0.4);
+  color: #fff7ed;
+}
+
+.theme-page {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.accent-bg {
+  background-color: var(--accent);
+}
+
+.accent-soft {
+  background-color: rgb(var(--accent-rgb) / 0.12);
+}
+
+.accent-border {
+  border-color: rgb(var(--accent-rgb) / 0.32);
 }

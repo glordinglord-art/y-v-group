@@ -62,7 +62,7 @@ export function SiteHeader({ page }: SiteHeaderProps) {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-300">
+              <p className="accent-text text-xs font-semibold uppercase tracking-[0.35em]">
                 Y.V. Group
               </p>
               <p className="text-sm text-white/70">
@@ -88,7 +88,7 @@ export function SiteHeader({ page }: SiteHeaderProps) {
           <div className="hidden lg:block">
             <TrackedLink
               href="/contacto#formulario"
-              className="rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-orange-400 hover:shadow-[0_18px_40px_rgba(249,115,22,0.35)]"
+              className="accent-bg accent-shadow rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:-translate-y-0.5"
               eventName="nav_cta_contact"
               eventSection="header"
             >
@@ -122,7 +122,7 @@ export function SiteHeader({ page }: SiteHeaderProps) {
             ))}
             <TrackedLink
               href="/contacto#formulario"
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:bg-orange-400"
+              className="accent-bg mt-2 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-white transition duration-300"
               eventName="nav_cta_contact_mobile"
               eventSection="header_mobile"
             >

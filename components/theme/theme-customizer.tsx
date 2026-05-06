@@ -35,6 +35,7 @@ export function ThemeCustomizer() {
 
   const [mode, setMode] = useState<ThemeMode>(initialTheme.mode);
   const [accent, setAccent] = useState(initialTheme.accent);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     applyTheme(mode, accent);
@@ -57,39 +58,59 @@ export function ThemeCustomizer() {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: 0.35 }}
-      className="fixed right-4 top-24 z-[110] rounded-[1.5rem] border border-white/10 bg-black/40 p-3 shadow-[0_24px_60px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
+      className="fixed bottom-4 right-4 z-[110] sm:bottom-auto sm:right-4 sm:top-24"
     >
-      <div className="flex items-center gap-2">
-        <button
-          type="button"
-          onClick={() => updateMode("dark")}
-          className={`rounded-full px-3 py-2 text-sm transition ${mode === "dark" ? "accent-bg text-white" : "bg-white/[0.06] text-white/70"}`}
-          aria-label="Modo oscuro"
-        >
-          ☾
-        </button>
-        <button
-          type="button"
-          onClick={() => updateMode("light")}
-          className={`rounded-full px-3 py-2 text-sm transition ${mode === "light" ? "accent-bg text-white" : "bg-white/[0.06] text-white/70"}`}
-          aria-label="Modo claro"
-        >
-          ☀
-        </button>
-      </div>
-
-      <div className="mt-3 flex items-center gap-2">
-        {accents.map((item) => (
+      <motion.div
+        animate={{ width: open ? "auto" : 56 }}
+        className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/50 p-2 shadow-[0_24px_60px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
+      >
+        <div className="flex items-center gap-2">
           <button
-            key={item.name}
             type="button"
-            onClick={() => updateAccent(item)}
-            aria-label={`Color ${item.name}`}
-            className={`h-7 w-7 rounded-full border transition ${accent.value === item.value ? "border-white scale-110" : "border-white/20"}`}
-            style={{ backgroundColor: item.value }}
-          />
-        ))}
-      </div>
+            onClick={() => setOpen((value) => !value)}
+            aria-label={open ? "Minimizar panel" : "Abrir panel"}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white/80 transition hover:bg-white/[0.1]"
+          >
+            {open ? "-" : "+"}
+          </button>
+
+          {open ? (
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => updateMode("dark")}
+                className={`rounded-full px-3 py-2 text-sm transition ${mode === "dark" ? "accent-bg text-white" : "bg-white/[0.06] text-white/70"}`}
+                aria-label="Modo oscuro"
+              >
+                ☾
+              </button>
+              <button
+                type="button"
+                onClick={() => updateMode("light")}
+                className={`rounded-full px-3 py-2 text-sm transition ${mode === "light" ? "accent-bg text-white" : "bg-white/[0.06] text-white/70"}`}
+                aria-label="Modo claro"
+              >
+                ☀
+              </button>
+            </div>
+          ) : null}
+        </div>
+
+        {open ? (
+          <div className="mt-3 flex items-center gap-2 px-1 pb-1">
+            {accents.map((item) => (
+              <button
+                key={item.name}
+                type="button"
+                onClick={() => updateAccent(item)}
+                aria-label={`Color ${item.name}`}
+                className={`h-7 w-7 rounded-full border transition ${accent.value === item.value ? "border-white scale-110" : "border-white/20"}`}
+                style={{ backgroundColor: item.value }}
+              />
+            ))}
+          </div>
+        ) : null}
+      </motion.div>
     </motion.div>
   );
 }

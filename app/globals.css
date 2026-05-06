@@ -53,10 +53,26 @@ body {
   background-color: var(--accent);
 }
 
+.accent-shadow {
+  box-shadow: 0 18px 40px rgb(var(--accent-rgb) / 0.35);
+}
+
 .accent-soft {
   background-color: rgb(var(--accent-rgb) / 0.12);
 }
 
 .accent-border {
   border-color: rgb(var(--accent-rgb) / 0.32);
+}
+
+.accent-border-strong {
+  border-color: rgb(var(--accent-rgb) / 0.52);
+}
+
+.theme-heading {
+  color: var(--foreground);
+}
+
+.theme-muted {
+  color: color-mix(in srgb, var(--foreground) 72%, transparent);
 }

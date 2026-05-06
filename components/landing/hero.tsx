@@ -75,7 +75,7 @@ export function Hero() {
             >
               <TrackedLink
                 href="/servicios"
-                className="group inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-orange-400 hover:shadow-[0_18px_40px_rgba(249,115,22,0.35)]"
+                className="accent-bg accent-shadow group inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-0.5"
                 eventName="cta_services_hero"
                 eventSection="hero"
               >
@@ -86,7 +86,7 @@ export function Hero() {
               </TrackedLink>
               <TrackedLink
                 href="/contacto"
-                className="inline-flex items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.06] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-xl transition hover:border-white/30 hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.06] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-xl transition hover:bg-white/10 accent-border"
                 eventName="cta_contact_hero"
                 eventSection="hero"
               >

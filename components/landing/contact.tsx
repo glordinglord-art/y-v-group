@@ -28,7 +28,7 @@ export function Contact() {
         transition={{ duration: 0.55, ease: "easeOut" }}
         className="rounded-[2rem] border border-white/10 bg-[#111111] p-8 shadow-[0_25px_80px_rgba(0,0,0,0.28)]"
       >
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+        <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
           Contacto
         </p>
         <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-white">
@@ -47,7 +47,7 @@ export function Contact() {
             <a
               href={siteConfig.phoneHref}
               onClick={() => trackEvent("click_phone", { section: "contacto" })}
-              className="mt-3 block text-2xl font-semibold text-white transition hover:text-orange-400"
+              className="mt-3 block text-2xl font-semibold text-white transition hover:accent-text"
             >
               {siteConfig.phone.replace("+57 ", "")}
             </a>
@@ -59,7 +59,7 @@ export function Contact() {
             <a
               href={`mailto:${siteConfig.email}`}
               onClick={() => trackEvent("click_email", { section: "contacto" })}
-              className="mt-3 block text-xl font-semibold text-white transition hover:text-orange-400"
+              className="mt-3 block text-xl font-semibold text-white transition hover:accent-text"
             >
               {siteConfig.email}
             </a>
@@ -116,7 +116,7 @@ export function Contact() {
               name="name"
               required
               placeholder="Tu nombre"
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400"
+              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
             />
           </label>
           <label className="grid gap-3">
@@ -126,7 +126,7 @@ export function Contact() {
               name="email"
               required
               placeholder="tu@correo.com"
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400"
+              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
             />
           </label>
           <label className="grid gap-3">
@@ -135,7 +135,7 @@ export function Contact() {
               type="tel"
               name="phone"
               placeholder="Tu telefono"
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400"
+              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
             />
           </label>
           <label className="grid gap-3">
@@ -143,7 +143,7 @@ export function Contact() {
             <select
               name="interest"
               defaultValue=""
-              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition focus:border-orange-400"
+              className="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition focus:accent-border"
             >
               <option value="" disabled>
                 Selecciona una opcion
@@ -161,12 +161,12 @@ export function Contact() {
               rows={6}
               required
               placeholder="Cuantame que necesitas y te contactaremos pronto."
-              className="rounded-[1.5rem] border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400"
+              className="rounded-[1.5rem] border border-white/10 bg-black/20 px-5 py-4 text-white outline-none transition placeholder:text-zinc-500 focus:accent-border"
             />
           </label>
           <button
             type="submit"
-            className="inline-flex items-center justify-center rounded-full bg-orange-500 px-7 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-orange-400 hover:shadow-[0_18px_40px_rgba(249,115,22,0.35)]"
+            className="accent-bg accent-shadow inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-white transition duration-300 hover:-translate-y-0.5"
           >
             Enviar mensaje
           </button>

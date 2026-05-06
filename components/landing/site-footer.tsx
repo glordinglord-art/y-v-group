@@ -27,7 +27,7 @@ export function SiteFooter() {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-300">
+              <p className="accent-text text-xs font-semibold uppercase tracking-[0.35em]">
                 Y.V. Group
               </p>
               <p className="text-sm text-white/70">
@@ -42,7 +42,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
+          <p className="accent-text text-xs font-semibold uppercase tracking-[0.3em]">
             Navegacion
           </p>
           <div className="mt-5 grid gap-3 text-sm text-zinc-400">
@@ -59,7 +59,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
+          <p className="accent-text text-xs font-semibold uppercase tracking-[0.3em]">
             Contacto
           </p>
           <div className="mt-5 grid gap-3 text-sm text-zinc-400">

@@ -48,10 +48,10 @@ export function Services() {
         <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
           Portafolio de servicios
         </p>
-        <h2 className="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
+        <h2 className="theme-heading text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
           Gestion inmobiliaria premium con criterio tecnico y enfoque humano.
         </h2>
-        <p className="text-lg leading-8 text-zinc-300">
+        <p className="theme-muted text-lg leading-8">
           Cada servicio esta pensado para proteger patrimonio, ordenar la
           operacion y convertir la administracion en una fuente de confianza.
         </p>
@@ -69,7 +69,7 @@ export function Services() {
               delay: index * 0.08,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.045] p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]"
+            className="theme-surface group relative overflow-hidden rounded-[1.75rem] border p-7 backdrop-blur-xl transition duration-300 hover:-translate-y-1"
             style={{ boxShadow: "0 20px 45px rgb(var(--accent-rgb) / 0.14)" }}
           >
             <div
@@ -87,14 +87,14 @@ export function Services() {
               >
                 {service.icon}
               </span>
-              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-white/45">
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] theme-muted">
                 Premium
               </span>
             </div>
-            <h3 className="mt-8 text-2xl font-semibold tracking-[-0.03em] text-white">
+            <h3 className="theme-heading mt-8 text-2xl font-semibold tracking-[-0.03em]">
               {service.title}
             </h3>
-            <p className="mt-4 text-base leading-7 text-zinc-300">
+            <p className="theme-muted mt-4 text-base leading-7">
               {service.description}
             </p>
           </motion.article>

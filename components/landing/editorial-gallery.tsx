@@ -83,13 +83,13 @@ export function EditorialGallery() {
   return (
     <section ref={ref} className="mx-auto w-full max-w-7xl px-6 py-28 sm:px-10 lg:px-12">
       <ScrollReveal className="mb-12 flex max-w-3xl flex-col gap-5">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+        <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
           Galeria editorial
         </p>
-        <h2 className="text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
+        <h2 className="theme-heading text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">
           Una capa visual tipo revista premium para que la marca se sienta mas exclusiva.
         </h2>
-        <p className="text-lg leading-8 text-zinc-300">
+        <p className="theme-muted text-lg leading-8">
           Esta seccion aporta lenguaje visual de lujo y queda lista para reemplazar
           cada panel con fotografias reales mas adelante, sin cambiar la estructura.
         </p>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function ServiciosPage() {
   return (
-    <main className="bg-[#0a0a0a] text-white">
+    <main className="theme-page">
       <SiteHeader page="home" />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
@@ -32,10 +32,10 @@ export default function ServiciosPage() {
           <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
             Servicios
           </p>
-          <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
+          <h1 className="theme-heading mt-5 text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">
             Un portafolio pensado para proteger patrimonio y ordenar la operacion.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
+          <p className="theme-muted mt-6 max-w-3xl text-lg leading-8">
             Aqui estan reunidos los servicios con los que Y.V. Group acompana
             copropiedades, inversionistas y consejos para tomar mejores decisiones.
           </p>
@@ -46,12 +46,12 @@ export default function ServiciosPage() {
       <ShowcaseDevice />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-8 sm:px-10 lg:px-12">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 backdrop-blur-xl lg:flex-row lg:items-center">
+        <div className="theme-surface flex flex-col items-start justify-between gap-6 rounded-[2rem] border p-8 backdrop-blur-xl lg:flex-row lg:items-center">
           <div>
             <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
               Continuemos
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
+            <h2 className="theme-heading mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
               Mira la experiencia y los proyectos que respaldan este portafolio.
             </h2>
           </div>

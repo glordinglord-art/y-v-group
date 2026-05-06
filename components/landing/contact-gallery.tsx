@@ -83,13 +83,13 @@ export function ContactGallery() {
   return (
     <section ref={ref} className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
       <ScrollReveal className="mb-12 flex max-w-3xl flex-col gap-5">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
+        <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
           Galeria premium
         </p>
-        <h2 className="text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
+        <h2 className="theme-heading text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">
           Una ruta de contacto que tambien entra por los ojos.
         </h2>
-        <p className="text-lg leading-8 text-zinc-300">
+        <p className="theme-muted text-lg leading-8">
           Esta capa editorial vuelve la pagina de contacto mas aspiracional y lista
           para presentar fotos reales, recorridos o piezas de marca de alto nivel.
         </p>

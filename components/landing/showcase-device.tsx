@@ -85,10 +85,10 @@ export function ShowcaseDevice() {
             <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
               Experiencia inmersiva
             </p>
-            <h2 className="mt-5 text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
+            <h2 className="theme-heading mt-5 text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">
               Un mockup premium que cuenta la historia mientras el usuario baja.
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-300">
+            <p className="theme-muted mt-6 max-w-xl text-lg leading-8">
               La idea es que la pagina no solo se vea linda: que se sienta viva,
               con una narrativa visual que haga ver la marca mas sofisticada y memorable.
             </p>
@@ -99,12 +99,12 @@ export function ShowcaseDevice() {
                   key={step.title}
                   animate={{ opacity: activeIndex === index ? 1 : 0.45, x: activeIndex === index ? 0 : -8 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl"
+                  className="theme-surface rounded-[1.5rem] border p-5 backdrop-blur-xl"
                 >
                   <p className="accent-text text-xs uppercase tracking-[0.28em]">
                     0{index + 1} {step.eyebrow}
                   </p>
-                  <p className="mt-3 text-lg font-semibold text-white">{step.title}</p>
+                  <p className="theme-heading mt-3 text-lg font-semibold">{step.title}</p>
                 </motion.div>
               ))}
             </div>
@@ -122,16 +122,16 @@ export function ShowcaseDevice() {
                   className="absolute inset-0 rounded-[2.75rem] blur-3xl"
                   style={{ backgroundColor: "rgb(var(--accent-rgb) / 0.2)" }}
                 />
-                <div className="relative rounded-[2.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(14,14,14,0.98))] p-4 shadow-[0_40px_100px_rgba(0,0,0,0.48)] backdrop-blur-2xl">
-                  <div className="rounded-[2.1rem] border border-white/10 bg-[#0f0f10] p-4">
-                    <div className="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-white/[0.04] px-5 py-4">
+                <div className="theme-panel relative rounded-[2.75rem] border border-white/10 p-4 shadow-[0_40px_100px_rgba(0,0,0,0.48)] backdrop-blur-2xl">
+                  <div className="theme-surface-strong rounded-[2.1rem] border p-4">
+                    <div className="theme-surface flex items-center justify-between rounded-[1.5rem] border px-5 py-4">
                       <div>
                         <p className="accent-text text-xs uppercase tracking-[0.28em]">
                           Y.V. Group Interface
                         </p>
                         <motion.p
                           key={`title-${steps[0].panelTitle}`}
-                          className="mt-2 text-lg font-semibold text-white"
+                          className="theme-heading mt-2 text-lg font-semibold"
                         >
                           Panel de administracion premium
                         </motion.p>
@@ -145,10 +145,10 @@ export function ShowcaseDevice() {
 
                     <div className="mt-4 grid gap-4 lg:grid-cols-[0.62fr_0.38fr]">
                       <div
-                        className="rounded-[1.75rem] border border-white/10 p-6"
+                        className="theme-panel rounded-[1.75rem] border border-white/10 p-6"
                         style={{
                           background:
-                            "linear-gradient(160deg, rgb(var(--accent-rgb) / 0.16), rgba(20,20,20,0.96) 56%, rgba(10,10,10,1))",
+                            "linear-gradient(160deg, rgb(var(--accent-rgb) / 0.16), color-mix(in srgb, var(--background) 94%, black 6%) 56%, var(--background))",
                         }}
                       >
                         {steps.map((step, index) => (
@@ -168,7 +168,7 @@ export function ShowcaseDevice() {
                                 <p className="text-xs uppercase tracking-[0.28em] text-white/70">
                                   {step.eyebrow}
                                 </p>
-                                <h3 className="mt-3 max-w-sm text-3xl font-semibold tracking-[-0.04em] text-white">
+                                <h3 className="theme-heading mt-3 max-w-sm text-3xl font-semibold tracking-[-0.04em]">
                                   {step.title}
                                 </h3>
                               </div>
@@ -181,7 +181,7 @@ export function ShowcaseDevice() {
                               />
                             </div>
 
-                            <p className="mt-5 max-w-lg text-base leading-7 text-zinc-300">
+                            <p className="theme-muted mt-5 max-w-lg text-base leading-7">
                               {step.description}
                             </p>
 
@@ -189,7 +189,7 @@ export function ShowcaseDevice() {
                               {step.chips.map((item) => (
                                 <div
                                   key={item}
-                                  className="rounded-2xl border border-white/10 bg-black/20 px-4 py-4 text-sm font-medium text-zinc-200"
+                                  className="theme-surface rounded-2xl border px-4 py-4 text-sm font-medium theme-heading"
                                 >
                                   {item}
                                 </div>
@@ -212,23 +212,23 @@ export function ShowcaseDevice() {
                             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                             className={activeIndex === index ? "grid gap-4" : "hidden"}
                           >
-                            <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5">
+                            <div className="theme-surface rounded-[1.75rem] border p-5">
                               <p className="accent-text text-xs uppercase tracking-[0.28em]">
                                 {step.primaryMetricLabel}
                               </p>
-                              <p className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white">
+                              <p className="theme-heading mt-4 text-4xl font-semibold tracking-[-0.05em]">
                                 {step.primaryMetricValue}
                               </p>
-                              <p className="mt-2 text-sm text-zinc-400">{step.panelTitle}</p>
+                              <p className="theme-muted mt-2 text-sm">{step.panelTitle}</p>
                             </div>
-                            <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-5">
+                            <div className="theme-surface rounded-[1.75rem] border p-5">
                               <p className="accent-text text-xs uppercase tracking-[0.28em]">
                                 {step.secondaryMetricLabel}
                               </p>
-                              <p className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white">
+                              <p className="theme-heading mt-4 text-4xl font-semibold tracking-[-0.05em]">
                                 {step.secondaryMetricValue}
                               </p>
-                              <p className="mt-2 text-sm text-zinc-400">Visibilidad premium</p>
+                              <p className="theme-muted mt-2 text-sm">Visibilidad premium</p>
                             </div>
                           </motion.div>
                         ))}

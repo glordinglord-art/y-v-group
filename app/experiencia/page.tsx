@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function ExperienciaPage() {
   return (
-    <main className="bg-[#0a0a0a] text-white">
+    <main className="theme-page">
       <SiteHeader page="home" />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
@@ -56,10 +56,10 @@ export default function ExperienciaPage() {
           <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
             Experiencia
           </p>
-          <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
+          <h1 className="theme-heading mt-5 text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">
             Proyectos y visuales que respaldan una gestion de alto nivel.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
+          <p className="theme-muted mt-6 max-w-3xl text-lg leading-8">
             Esta pagina concentra la experiencia destacada, la presencia visual y
             el lenguaje editorial que fortalece la percepcion de marca.
           </p>
@@ -71,15 +71,15 @@ export default function ExperienciaPage() {
           {projects.map((project) => (
             <ScrollReveal
               key={project.name}
-              className="rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 backdrop-blur-xl"
+              className="theme-surface rounded-[2rem] border p-8 backdrop-blur-xl"
             >
               <p className="accent-text text-xs uppercase tracking-[0.28em]">
                 {project.location}
               </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white">
+              <h2 className="theme-heading mt-4 text-3xl font-semibold tracking-[-0.04em]">
                 {project.name}
               </h2>
-              <p className="mt-4 text-base leading-7 text-zinc-300">{project.detail}</p>
+              <p className="theme-muted mt-4 text-base leading-7">{project.detail}</p>
             </ScrollReveal>
           ))}
         </div>
@@ -89,12 +89,12 @@ export default function ExperienciaPage() {
       <ContactGallery />
 
       <section className="mx-auto w-full max-w-7xl px-6 py-8 sm:px-10 lg:px-12">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-white/10 bg-white/[0.045] p-8 backdrop-blur-xl lg:flex-row lg:items-center">
+        <div className="theme-surface flex flex-col items-start justify-between gap-6 rounded-[2rem] border p-8 backdrop-blur-xl lg:flex-row lg:items-center">
           <div>
             <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
               Contacto
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
+            <h2 className="theme-heading mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
               Si quieres avanzar, la pagina de contacto ya esta lista para convertir.
             </h2>
           </div>

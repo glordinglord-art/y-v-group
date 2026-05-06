@@ -3,17 +3,15 @@
 import { animate, motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+import { brandContent } from "@/content/brand-content";
+
 type Stat = {
   value: number;
   suffix: string;
   label: string;
 };
 
-const stats: Stat[] = [
-  { value: 14, suffix: " anos", label: "de experiencia" },
-  { value: 2542, suffix: " familias", label: "impactadas" },
-  { value: 7222, suffix: " millones", label: "de presupuesto administrado" },
-];
+const stats: Stat[] = [...brandContent.metrics];
 
 function Counter({ value, suffix, label }: Stat) {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -38,7 +36,7 @@ function Counter({ value, suffix, label }: Stat) {
 
   return (
     <div ref={ref} className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl">
-      <p className="text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
+      <p className="break-words text-[clamp(2rem,7vw,3rem)] font-semibold tracking-[-0.05em] text-white">
         {display.toLocaleString("es-CO")}
         <span className="accent-text">{suffix}</span>
       </p>

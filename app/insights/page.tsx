@@ -8,35 +8,35 @@ import { siteConfig } from "@/lib/site";
 const insights = [
   {
     tag: "SEO local",
-    title: "Como elegir una administracion de propiedad horizontal en Antioquia",
+    title: "Cómo elegir una administración de propiedad horizontal en Antioquia",
     description:
-      "Pieza pensada para captar trafico organico con una intencion comercial clara y construir autoridad local.",
+      "Pieza pensada para captar tráfico orgánico con una intención comercial clara y construir autoridad local.",
   },
   {
-    tag: "Inversion",
-    title: "Senales clave antes de invertir en un activo inmobiliario",
+    tag: "Inversión",
+    title: "Señales clave antes de invertir en un activo inmobiliario",
     description:
-      "Contenido futuro ideal para campanas de Meta Ads y Google Ads orientadas a educar y convertir.",
+      "Contenido futuro ideal para campañas de Meta Ads y Google Ads orientadas a educar y convertir.",
   },
   {
     tag: "Convivencia",
-    title: "Buenas practicas para mejorar la convivencia en copropiedades",
+    title: "Buenas prácticas para mejorar la convivencia en copropiedades",
     description:
-      "Una categoria muy util para posicionar la experiencia de Y.V. Group y atraer administraciones que buscan orden.",
+      "Una categoría muy útil para posicionar la experiencia de Y.V. Group y atraer administraciones que buscan orden.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "Insights",
   description:
-    "Espacio editorial de Y.V. Group para contenidos sobre propiedad horizontal, avaluos, inversion inmobiliaria y SEO local en Antioquia.",
+    "Espacio editorial de Y.V. Group para contenidos sobre propiedad horizontal, avaluós, inversión inmobiliaria y SEO local en Antioquia.",
   alternates: {
     canonical: "/insights",
   },
   openGraph: {
     title: "Insights | Y.V. Group",
     description:
-      "Pagina preparada para contenidos futuros, autoridad de marca y publicidad de Y.V. Group.",
+      "Página preparada para contenidos futuros, autoridad de marca y publicidad de Y.V. Group.",
     url: `${siteConfig.url}/insights`,
   },
 };
@@ -52,10 +52,10 @@ export default function InsightsPage() {
             Insights
           </p>
           <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
-            Un espacio listo para SEO, autoridad y campanas futuras.
+            Un espacio listo para SEO, autoridad y campañas futuras.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-            Aqui se pueden publicar articulos, novedades y piezas que apoyen el posicionamiento de marca y el rendimiento de la publicidad.
+            Aquí se pueden publicar artículos, novedades y piezas que apoyen el posicionamiento de marca y el rendimiento de la publicidad.
           </p>
         </ScrollReveal>
       </section>

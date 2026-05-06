@@ -10,65 +10,65 @@ import { siteConfig } from "@/lib/site";
 
 const projects = [
   {
-    name: "Parcelacion San Luis",
-    detail: "Gestion administrativa y financiera para una operacion ordenada.",
+    name: "Parcelación San Luis",
+    detail: "Gestión administrativa y financiera para una operación ordenada.",
     location: "El Retiro, Antioquia",
     category: "Copropiedad residencial",
   },
   {
     name: "Villa Fontana",
-    detail: "Acompanamiento integral enfocado en convivencia y valorizacion.",
+    detail: "Acompañamiento integral enfocado en convivencia y valorización.",
     location: "Envigado, Antioquia",
-    category: "Gestion de convivencia",
+    category: "Gestión de convivencia",
   },
   {
     name: "Continental Towers",
-    detail: "Control presupuestal y trazabilidad operativa para decisiones solidas.",
-    location: "Area metropolitana",
+    detail: "Control presupuestal y trazabilidad operativa para decisiones sólidas.",
+    location: "Área metropolitana",
     category: "Control financiero",
   },
   {
     name: "Retiro Verde",
-    detail: "Direccion moderna de copropiedad con foco en sostenibilidad.",
-    location: "Oriente antioqueno",
-    category: "Sostenibilidad y gestion",
+    detail: "Dirección moderna de copropiedad con foco en sostenibilidad.",
+    location: "Oriente antioqueño",
+    category: "Sostenibilidad y gestión",
   },
 ];
 
 const faqs = [
   {
-    question: "Que servicios ofrece Y.V. Group?",
+    question: "¿Qué servicios ofrece Y.V. Group?",
     answer:
-      "Y.V. Group ofrece administracion de propiedad horizontal, asesoria inmobiliaria, avaluos, control financiero, mediacion de conflictos y gestion documental.",
+      "Y.V. Group ofrece administración de propiedad horizontal, asesoría inmobiliaria, avaluós, control financiero, mediación de conflictos y gestión documental.",
   },
   {
-    question: "Y.V. Group trabaja con la Ley 675?",
+    question: "¿Y.V. Group trabaja con la Ley 675?",
     answer:
-      "Si. La gestion de Y.V. Group esta alineada con la Ley 675 y con buenas practicas administrativas para copropiedades y conjuntos residenciales.",
+      "Sí. La gestión de Y.V. Group está alineada con la Ley 675 y con buenas prácticas administrativas para copropiedades y conjuntos residenciales.",
   },
   {
-    question: "Como puedo contactar a Yiseth Velez?",
+    question: "¿Cómo puedo contactar a Yiseth Vélez?",
     answer:
-      "Puedes contactar a Y.V. Group por telefono, correo, WhatsApp o mediante el formulario de contacto de esta pagina.",
+      "Puedes contactar a Y.V. Group por teléfono, correo, WhatsApp o mediante el formulario de contacto de esta página.",
   },
   {
-    question: "Y.V. Group presta servicios de avaluos e inversion inmobiliaria?",
+    question: "¿Y.V. Group presta servicios de avaluós e inversión inmobiliaria?",
     answer:
-      "Si. La firma acompana procesos de avaluos, asesoria legal e inversion inmobiliaria para tomar decisiones mas seguras y rentables.",
+      "Sí. La firma acompaña procesos de avaluós, asesoría legal e inversión inmobiliaria para tomar decisiones más seguras y rentables.",
   },
 ];
 
 export const metadata: Metadata = {
   title: "Contacto y Proyectos",
   description:
-    "Pagina de contacto de Y.V. Group con formulario, WhatsApp, proyectos destacados y preguntas frecuentes en Antioquia.",
+    "Página de contacto de Y.V. Group con formulario, WhatsApp, proyectos destacados y preguntas frecuentes en Antioquia.",
   alternates: {
     canonical: "/contacto",
   },
   openGraph: {
-    title: "Contacto Y.V. Group | Asesoria inmobiliaria en Antioquia",
+    title: "Contacto Y.V. Group | Asesoría inmobiliaria en Antioquia",
     description:
-      "Contacta a Y.V. Group por formulario, correo, telefono o WhatsApp. Conoce proyectos y servicios inmobiliarios en Antioquia.",
+      "Contacta a Y.V. Group por formulario, correo, teléfono o WhatsApp. Conoce proyectos y servicios inmobiliarios en Antioquia.",
     url: `${siteConfig.url}/contacto`,
   },
 };
@@ -90,10 +90,10 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div>
               <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
-                Contactanos
+                Contáctanos
               </p>
               <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
-                Una pagina aparte para hablar claro, mostrar proyectos y cerrar clientes.
+                Una página aparte para hablar claro, mostrar proyectos y cerrar clientes.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
                 {brandContent.contact.description}
@@ -122,11 +122,11 @@ export default function ContactPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.05] p-6 backdrop-blur-xl">
                 <p className="accent-text text-xs uppercase tracking-[0.3em]">
-                  Telefono
+                  Teléfono
                 </p>
                 <p className="mt-4 text-3xl font-semibold text-white">310 838 1590</p>
                 <p className="mt-3 text-base leading-7 text-zinc-300">
-                  Atencion cercana para copropiedades, consejos e inversionistas.
+                  Atención cercana para copropiedades, consejos e inversionistas.
                 </p>
               </div>
               <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.05] p-6 backdrop-blur-xl">
@@ -200,13 +200,13 @@ export default function ContactPage() {
           }}
         >
           <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
-            Conversion
+            Conversión
           </p>
           <h2 className="mt-5 max-w-3xl text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
-            Si tu tia quiere que los clientes contacten facil, esta pagina ya esta hecha para eso.
+            Si tu tía quiere que los clientes contacten fácil, esta página ya está hecha para eso.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-            Botones claros, telefono, correo, WhatsApp y formulario visible en una sola ruta.
+            Botones claros, teléfono, correo, WhatsApp y formulario visible en una sola ruta.
           </p>
         </div>
       </section>
@@ -221,7 +221,7 @@ export default function ContactPage() {
             Preguntas frecuentes
           </p>
           <h2 className="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl">
-            Respuestas claras para decidir mas rapido.
+            Respuestas claras para decidir más rápido.
           </h2>
         </div>
 

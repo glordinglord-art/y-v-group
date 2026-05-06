@@ -10,14 +10,14 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Servicios",
   description:
-    "Servicios de Y.V. Group: administracion de propiedad horizontal, avaluos, asesoria inmobiliaria, control financiero y gestion documental en Antioquia.",
+    "Servicios de Y.V. Group: administración de propiedad horizontal, avaluós, asesoría inmobiliaria, control financiero y gestión documental en Antioquia.",
   alternates: {
     canonical: "/servicios",
   },
   openGraph: {
     title: "Servicios | Y.V. Group",
     description:
-      "Descubre el portafolio premium de Y.V. Group para copropiedades, inversionistas y consejos de administracion.",
+      "Descubre el portafolio premium de Y.V. Group para copropiedades, inversionistas y consejos de administración.",
     url: `${siteConfig.url}/servicios`,
   },
 };
@@ -33,10 +33,10 @@ export default function ServiciosPage() {
             Servicios
           </p>
           <h1 className="theme-heading mt-5 text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">
-            Un portafolio pensado para proteger patrimonio y ordenar la operacion.
+            Un portafolio pensado para proteger patrimonio y ordenar la operación.
           </h1>
           <p className="theme-muted mt-6 max-w-3xl text-lg leading-8">
-            Aqui estan reunidos los servicios con los que Y.V. Group acompana
+            Aquí están reunidos los servicios con los que Y.V. Group acompaña
             copropiedades, inversionistas y consejos para tomar mejores decisiones.
           </p>
         </div>

@@ -36,14 +36,14 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-5 max-w-md text-sm leading-7 text-zinc-400">
-            Administracion de propiedad horizontal, bienes raices, inversiones y
-            avaluos con enfoque premium, confianza institucional y vision de crecimiento.
+            Administración de propiedad horizontal, bienes raíces, inversiones y
+            avaluós con enfoque premium, confianza institucional y visión de crecimiento.
           </p>
         </div>
 
         <div>
           <p className="accent-text text-xs font-semibold uppercase tracking-[0.3em]">
-            Navegacion
+            Navegación
           </p>
           <div className="mt-5 grid gap-3 text-sm text-zinc-400">
             {footerLinks.map((link) => (
@@ -75,8 +75,8 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-6 py-5 text-sm text-zinc-500 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-12">
-          <p>Y.V. Group | Diseno premium responsive listo para despliegue en Vercel.</p>
-          <p>Preparada para SEO, metricas, publicidad y conversion.</p>
+          <p>Y.V. Group | Diseño premium responsive listo para despliegue en Vercel.</p>
+          <p>Preparada para SEO, métricas, publicidad y conversión.</p>
         </div>
       </div>
     </footer>

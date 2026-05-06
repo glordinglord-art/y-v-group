@@ -32,17 +32,17 @@ export function Contact() {
           Contacto
         </p>
         <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-white">
-          Hablemos de tu copropiedad o de tu proxima inversion.
+          Hablemos de tu copropiedad o de tu próxima inversión.
         </h2>
         <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-300">
-          Estructura pensada para integrarse facilmente con EmailJS o Formspree
+          Estructura pensada para integrarse fácilmente con EmailJS o Formspree
           sin depender de backend propio.
         </p>
 
         <div className="mt-10 grid gap-6 text-zinc-200">
           <div className="rounded-[1.5rem] border border-white/[0.08] bg-white/[0.04] p-5">
             <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
-              Telefono
+              Teléfono
             </p>
             <a
               href={siteConfig.phoneHref}
@@ -130,28 +130,28 @@ export function Contact() {
             />
           </label>
           <label className="grid gap-3">
-            <span className="text-sm font-medium text-zinc-200">Telefono</span>
+            <span className="text-sm font-medium text-zinc-200">Teléfono</span>
             <input
               type="tel"
               name="phone"
-              placeholder="Tu telefono"
+              placeholder="Tu teléfono"
               className="accent-focus rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none placeholder:text-zinc-500"
             />
           </label>
           <label className="grid gap-3">
-            <span className="text-sm font-medium text-zinc-200">Interes principal</span>
+            <span className="text-sm font-medium text-zinc-200">Inter\u00e9s principal</span>
             <select
               name="interest"
               defaultValue=""
               className="accent-focus rounded-2xl border border-white/10 bg-black/20 px-5 py-4 text-white outline-none"
             >
               <option value="" disabled>
-                Selecciona una opcion
+                Selecciona una opción
               </option>
-              <option value="administracion">Administracion de propiedad horizontal</option>
-              <option value="avaluos">Avaluos</option>
-              <option value="asesoria">Asesoria inmobiliaria</option>
-              <option value="inversiones">Inversion inmobiliaria</option>
+              <option value="administracion">Administración de propiedad horizontal</option>
+              <option value="avaluos">Avaluós</option>
+              <option value="asesoria">Asesoría inmobiliaria</option>
+              <option value="inversiones">Inversión inmobiliaria</option>
             </select>
           </label>
           <label className="grid gap-3">

@@ -6,12 +6,21 @@ import { motion } from "framer-motion";
 import { brandContent } from "@/content/brand-content";
 import { SiteHeader } from "@/components/landing/site-header";
 import { TrackedLink } from "@/components/landing/tracked-link";
+import { siteConfig } from "@/lib/site";
 
 const badges = [
-  "Bienes raices premium",
+  "Bienes raíces premium",
   "Inversiones con criterio",
-  "Avaluos y administracion integral",
+  "Avalúos y administración integral",
 ];
+
+const heroMetrics = [
+  { value: "14+", label: "años de experiencia" },
+  { value: "360°", label: "visión legal y financiera" },
+  { value: "Directo", label: "acompañamiento ejecutivo" },
+];
+
+const heroSignals = ["Antioquia", "Propiedad horizontal", "Respuesta cercana"];
 
 export function Hero() {
   return (
@@ -35,20 +44,20 @@ export function Hero() {
 
       <SiteHeader page="home" />
 
-      <div className="relative mx-auto flex min-h-[calc(100vh-104px)] w-full max-w-7xl flex-col justify-between px-6 py-8 sm:px-10 lg:px-12">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col justify-center px-6 pb-8 pt-10 sm:px-10 sm:pt-14 md:pb-10 lg:min-h-[calc(100svh-104px)] lg:px-12 lg:pb-12 lg:pt-16 xl:pt-20">
 
-        <div className="grid items-end gap-16 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
+        <div className="grid items-center gap-8 py-6 md:gap-10 md:py-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 lg:py-10 xl:grid-cols-[1.15fr_0.85fr]">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="mb-6 flex flex-wrap gap-3"
+              className="mb-5 flex flex-wrap gap-2 sm:mb-6 sm:gap-3"
             >
               {badges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-full border border-white/10 bg-white/[0.08] px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white/70 backdrop-blur-xl"
+                  className="rounded-full border border-white/10 bg-white/[0.08] px-3 py-2 text-[10px] font-medium uppercase tracking-[0.18em] text-white/70 backdrop-blur-xl sm:px-4 sm:text-xs sm:tracking-[0.22em]"
                 >
                   {badge}
                 </span>
@@ -59,7 +68,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
+              className="max-w-4xl text-[clamp(2.25rem,9vw,4.8rem)] font-semibold tracking-[-0.04em] text-white lg:text-6xl xl:text-7xl"
             >
               {brandContent.company.tagline}
             </motion.h1>
@@ -68,20 +77,41 @@ export function Hero() {
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="mt-6 max-w-2xl text-lg leading-8 text-white/[0.72] sm:text-xl"
+              className="mt-4 max-w-2xl text-base leading-7 text-white/[0.72] sm:mt-5 sm:text-lg sm:leading-8 lg:text-lg xl:text-xl"
             >
               {brandContent.company.shortDescription}
             </motion.p>
 
             <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.26, ease: "easeOut" }}
+              className="mt-5 grid grid-cols-3 gap-2 sm:mt-7 sm:gap-3 xl:grid-cols-3"
+            >
+              {heroMetrics.map((item) => (
+                <div
+                  key={item.label}
+                  className="min-w-0 rounded-[1.2rem] border border-white/10 bg-white/[0.06] px-2.5 py-3 backdrop-blur-xl sm:rounded-[1.5rem] sm:px-5 sm:py-4"
+                >
+                  <p className="text-xl font-semibold tracking-[-0.05em] text-white sm:text-2xl">
+                    {item.value}
+                  </p>
+                  <p className="mt-2 min-w-0 break-words text-[8.5px] uppercase leading-4 tracking-[0.08em] text-white/55 sm:text-xs sm:tracking-[0.24em]">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="mt-10 flex flex-col gap-4 sm:flex-row"
+              className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4"
             >
               <TrackedLink
                 href="/servicios"
-                className="accent-bg accent-shadow group inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white transition duration-300 hover:-translate-y-0.5"
+                className="accent-bg accent-shadow group inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-white transition duration-300 hover:-translate-y-0.5 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.24em]"
                 eventName="cta_services_hero"
                 eventSection="hero"
               >
@@ -90,23 +120,54 @@ export function Hero() {
                   {"->"}
                 </span>
               </TrackedLink>
-              <TrackedLink
-                href="/contacto"
-                className="inline-flex items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.06] px-7 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-xl transition hover:bg-white/10 accent-border"
+                <TrackedLink
+                  href="/contacto"
+                className="accent-border inline-flex w-full items-center justify-center rounded-full border border-white/[0.15] bg-white/[0.06] px-6 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-xl transition hover:bg-white/10 sm:w-auto sm:px-7 sm:text-sm sm:tracking-[0.24em]"
                 eventName="cta_contact_hero"
                 eventSection="hero"
               >
                 Solicitar contacto
               </TrackedLink>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.38, ease: "easeOut" }}
+              className="mt-5 flex flex-wrap items-center gap-2 rounded-[1.5rem] border border-white/10 bg-white/[0.05] px-4 py-3 backdrop-blur-xl sm:mt-7 sm:gap-3 sm:rounded-full"
+            >
+              <span className="accent-text text-xs font-semibold uppercase tracking-[0.3em]">
+                Presencia premium
+              </span>
+              {heroSignals.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-[11px] uppercase tracking-[0.24em] text-white/70"
+                >
+                  {item}
+                </span>
+              ))}
+            </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
-          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+              className="relative mx-auto hidden w-full max-w-[34rem] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl sm:p-5 md:block lg:max-w-none"
+            >
+            <motion.div
+              initial={{ opacity: 0, y: -16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
+              className="absolute left-4 right-4 top-4 z-10 rounded-[1.25rem] border border-white/10 bg-black/35 px-4 py-3 backdrop-blur-xl sm:left-auto sm:right-7 sm:top-7 sm:rounded-full"
+            >
+              <p className="accent-text text-[10px] font-semibold uppercase tracking-[0.3em]">
+                Contacto directo
+              </p>
+              <p className="mt-1 text-sm font-medium text-white/85">{siteConfig.phone}</p>
+            </motion.div>
+
             <div
               className="absolute inset-x-0 top-0 h-px"
               style={{ background: "linear-gradient(to right, transparent, rgb(var(--accent-rgb) / 0.8), transparent)" }}
@@ -121,29 +182,30 @@ export function Hero() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[1.5rem] border border-white/10 bg-black/30 p-5">
+
+            <div className="mt-4 hidden grid-cols-2 gap-3 sm:mt-5 sm:gap-4 md:grid">
+              <div className="rounded-[1.3rem] border border-white/10 bg-black/30 p-4 sm:rounded-[1.5rem] sm:p-5">
                 <p className="accent-text text-xs uppercase tracking-[0.28em]">
                   Liderazgo
                 </p>
-                <p className="mt-3 text-2xl font-semibold text-white">
-                  Yiseth Velez
+                <p className="mt-3 text-xl font-semibold text-white sm:text-2xl">
+                  Yiseth Vélez
                 </p>
-                <p className="mt-2 text-sm leading-6 text-white/65">
-                  Administracion de propiedad horizontal con enfoque legal,
+                <p className="mt-2 text-xs leading-5 text-white/65 sm:text-sm sm:leading-6">
+                  Administración de propiedad horizontal con enfoque legal,
                   humano y financiero.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5">
+              <div className="rounded-[1.3rem] border border-white/10 bg-white/[0.06] p-4 sm:rounded-[1.5rem] sm:p-5">
                 <p className="accent-text text-xs uppercase tracking-[0.28em]">
                   Cobertura
                 </p>
-                <p className="mt-3 text-2xl font-semibold text-white">
+                <p className="mt-3 text-xl font-semibold text-white sm:text-2xl">
                   Antioquia
                 </p>
-                <p className="mt-2 text-sm leading-6 text-white/65">
-                  Copropiedades, proyectos residenciales y activos de inversion
-                  en expansion.
+                <p className="mt-2 text-xs leading-5 text-white/65 sm:text-sm sm:leading-6">
+                  Copropiedades, proyectos residenciales y activos de inversión
+                  en expansión.
                 </p>
               </div>
             </div>

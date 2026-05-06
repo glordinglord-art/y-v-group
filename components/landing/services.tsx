@@ -5,39 +5,39 @@ import { motion } from "framer-motion";
 const services = [
   {
     icon: "01",
-    title: "Administracion alineada a la Ley 675",
+    title: "Administración alineada a la Ley 675",
     description:
-      "Direccion integral de copropiedades con cumplimiento normativo, operacion estable y trazabilidad en la toma de decisiones.",
+      "Dirección integral de copropiedades con cumplimiento normativo, operación estable y trazabilidad en la toma de decisiones.",
   },
   {
     icon: "02",
-    title: "Mediacion de conflictos y convivencia",
+    title: "Mediación de conflictos y convivencia",
     description:
-      "Intervencion oportuna para proteger la armonia residencial y construir cultura de respeto entre residentes, consejo y administracion.",
+      "Intervención oportuna para proteger la armonía residencial y construir cultura de respeto entre residentes, consejo y administración.",
   },
   {
     icon: "03",
-    title: "Asesoria, titulos y avaluos",
+    title: "Asesoría, títulos y avalúos",
     description:
-      "Analisis tecnico y juridico para inversionistas y copropiedades con soporte en estudios de titulos, marcos legales y valoracion.",
+      "Análisis técnico y jurídico para inversionistas y copropiedades con soporte en estudios de títulos, marcos legales y valoración.",
   },
   {
     icon: "04",
     title: "Control contable y financiero",
     description:
-      "Presupuestos, cartera, seguimiento de indicadores y administracion responsable de recursos con foco en sostenibilidad financiera.",
+      "Presupuestos, cartera, seguimiento de indicadores y administración responsable de recursos con foco en sostenibilidad financiera.",
   },
   {
     icon: "05",
-    title: "Control documental y facturacion digital",
+    title: "Control documental y facturación digital",
     description:
-      "Estandarizacion de procesos, soporte documental y orden administrativo para una operacion moderna y auditable.",
+      "Estandarización de procesos, soporte documental y orden administrativo para una operación moderna y auditable.",
   },
   {
     icon: "06",
-    title: "Gestion estrategica para valorizacion",
+    title: "Gestión estratégica para valorización",
     description:
-      "Acciones concretas para elevar el valor percibido y real de los activos inmobiliarios a traves de una gestion profesional.",
+      "Acciones concretas para elevar el valor percibido y real de los activos inmobiliarios a través de una gestión profesional.",
   },
 ];
 
@@ -49,11 +49,11 @@ export function Services() {
           Portafolio de servicios
         </p>
         <h2 className="theme-heading text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-          Gestion inmobiliaria premium con criterio tecnico y enfoque humano.
+          Gestión inmobiliaria premium con criterio técnico y enfoque humano.
         </h2>
         <p className="theme-muted text-lg leading-8">
-          Cada servicio esta pensado para proteger patrimonio, ordenar la
-          operacion y convertir la administracion en una fuente de confianza.
+          Cada servicio está pensado para proteger patrimonio, ordenar la
+          operación y convertir la administración en una fuente de confianza.
         </p>
       </div>
 

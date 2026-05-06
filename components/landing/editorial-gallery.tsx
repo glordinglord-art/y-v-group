@@ -9,14 +9,14 @@ const galleryItems = [
   {
     title: "Arquitectura, orden y presencia",
     description:
-      "Composicion visual pensada para transmitir una marca sobria, moderna y confiable.",
+      "Composición visual pensada para transmitir una marca sobria, moderna y confiable.",
     accent: "from-orange-500/35 via-[#1b1b1b] to-[#090909]",
     height: "min-h-[420px]",
   },
   {
-    title: "Gestion con criterio premium",
+    title: "Gestión con criterio premium",
     description:
-      "El lenguaje visual comunica control, sofisticacion y direccion estrategica.",
+      "El lenguaje visual comunica control, sofisticación y dirección estratégica.",
     accent: "from-white/10 via-[#141414] to-[#0a0a0a]",
     height: "min-h-[300px]",
   },
@@ -84,14 +84,14 @@ export function EditorialGallery() {
     <section ref={ref} className="mx-auto w-full max-w-7xl px-6 py-28 sm:px-10 lg:px-12">
       <ScrollReveal className="mb-12 flex max-w-3xl flex-col gap-5">
         <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
-          Galeria editorial
+          Galería editorial
         </p>
         <h2 className="theme-heading text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">
-          Una capa visual tipo revista premium para que la marca se sienta mas exclusiva.
+          Una capa visual tipo revista premium para que la marca se sienta más exclusiva.
         </h2>
         <p className="theme-muted text-lg leading-8">
-          Esta seccion aporta lenguaje visual de lujo y queda lista para reemplazar
-          cada panel con fotografias reales mas adelante, sin cambiar la estructura.
+          Esta sección aporta lenguaje visual de lujo y queda lista para reemplazar
+          cada panel con fotografías reales más adelante, sin cambiar la estructura.
         </p>
       </ScrollReveal>
 

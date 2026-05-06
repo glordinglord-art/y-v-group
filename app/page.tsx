@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { AnimatedStats } from "@/components/landing/animated-stats";
 import { Hero } from "@/components/landing/hero";
+import { HomeStoryPanel } from "@/components/landing/home-story-panel";
 import { ScrollReveal } from "@/components/landing/scroll-reveal";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { TrackedLink } from "@/components/landing/tracked-link";
@@ -12,9 +13,9 @@ import { siteConfig } from "@/lib/site";
 const summaryCards = [
   {
     eyebrow: "Nosotros",
-    title: "La vision y el liderazgo que sostienen la marca.",
+    title: "La visión y el liderazgo que sostienen la marca.",
     description:
-      "Conoce a Yiseth Velez, la mision, la vision 2030 y los valores que respaldan cada decision.",
+      "Conoce a Yiseth Vélez, la misión, la visión 2030 y los valores que respaldan cada decisión.",
     href: "/nosotros",
     eventName: "home_teaser_nosotros",
   },
@@ -22,7 +23,7 @@ const summaryCards = [
     eyebrow: "Servicios",
     title: "Un portafolio premium para administrar, asesorar y valorizar.",
     description:
-      "Explora el detalle de administracion, mediacion, avaluos, control financiero y gestion documental.",
+      "Explora el detalle de administración, mediación, avaluós, control financiero y gestión documental.",
     href: "/servicios",
     eventName: "home_teaser_servicios",
   },
@@ -38,7 +39,7 @@ const summaryCards = [
     eyebrow: "Contacto",
     title: "Una ruta hecha para convertir visitas en conversaciones reales.",
     description:
-      "Formulario, telefono, correo, WhatsApp y una pagina dedicada para cerrar con elegancia.",
+      "Formulario, teléfono, correo, WhatsApp y una página dedicada para cerrar con elegancia.",
     href: "/contacto",
     eventName: "home_teaser_contacto",
   },
@@ -50,7 +51,7 @@ const organizationSchema = {
   name: "Y.V. Group",
   alternateName: "Y.V. Group Real Estate, Investments & Appraisals",
   description:
-    "Empresa de bienes raices, inversiones, avaluos y administracion de propiedad horizontal liderada por Yiseth Velez.",
+    "Empresa de bienes raíces, inversiones, avaluós y administración de propiedad horizontal liderada por Yiseth Vélez.",
   areaServed: "Antioquia, Colombia",
   address: {
     "@type": "PostalAddress",
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Y.V. Group | Bienes raices, inversiones y avaluos",
+    title: "Y.V. Group | Bienes raíces, inversiones y avaluós",
     description:
       "Inicio premium de Y.V. Group con acceso a servicios, experiencia, nosotros y contacto.",
     url: siteConfig.url,
@@ -101,6 +102,8 @@ export default function Home() {
           </p>
         </ScrollReveal>
       </section>
+
+      <HomeStoryPanel />
 
       <section className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-8 sm:px-10 lg:grid-cols-2 lg:px-12">
         {summaryCards.map((card, index) => (

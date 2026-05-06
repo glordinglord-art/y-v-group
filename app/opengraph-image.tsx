@@ -56,7 +56,7 @@ export default function OpenGraphImage() {
               Asesoro y protejo tus inversiones inmobiliarias.
             </div>
             <div style={{ display: "flex", fontSize: 30, lineHeight: 1.35, color: "rgba(255,255,255,0.72)" }}>
-              Administracion de propiedad horizontal, avaluos, inversiones y asesoria inmobiliaria en Antioquia.
+              Administración de propiedad horizontal, avaluós, inversiones y asesoría inmobiliaria en Antioquia.
             </div>
           </div>
           <div

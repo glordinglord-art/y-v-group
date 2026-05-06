@@ -9,21 +9,21 @@ const pieces = [
   {
     title: "Portafolio con presencia premium",
     description:
-      "Una composicion para mostrar proyectos, fotos reales y casos de exito sin perder elegancia.",
+      "Una composición para mostrar proyectos, fotos reales y casos de éxito sin perder elegancia.",
     gradient: "from-orange-500/30 via-[#1b1b1b] to-[#090909]",
     height: "min-h-[420px]",
   },
   {
     title: "Casos que inspiran confianza",
     description:
-      "Ideal para luego reemplazar por imagenes reales, recorridos o piezas editoriales del negocio.",
+      "Ideal para luego reemplazar por imágenes reales, recorridos o piezas editoriales del negocio.",
     gradient: "from-white/10 via-[#171717] to-[#0b0b0b]",
     height: "min-h-[300px]",
   },
   {
     title: "Visuales listos para vender mejor",
     description:
-      "Ayuda a que la pagina de contacto no sea solo funcional, sino memorable y mas convincente.",
+      "Ayuda a que la página de contacto no sea solo funcional, sino memorable y más convincente.",
     gradient: "from-orange-300/20 via-[#181818] to-[#090909]",
     height: "min-h-[340px]",
   },
@@ -84,13 +84,13 @@ export function ContactGallery() {
     <section ref={ref} className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
       <ScrollReveal className="mb-12 flex max-w-3xl flex-col gap-5">
         <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
-          Galeria premium
+          Galería premium
         </p>
         <h2 className="theme-heading text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">
-          Una ruta de contacto que tambien entra por los ojos.
+          Una ruta de contacto que también entra por los ojos.
         </h2>
         <p className="theme-muted text-lg leading-8">
-          Esta capa editorial vuelve la pagina de contacto mas aspiracional y lista
+          Esta capa editorial vuelve la página de contacto más aspiracional y lista
           para presentar fotos reales, recorridos o piezas de marca de alto nivel.
         </p>
       </ScrollReveal>

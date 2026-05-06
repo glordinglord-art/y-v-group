@@ -10,34 +10,34 @@ const cases = [
   {
     title: "Caso 01 | Copropiedad residencial",
     summary:
-      "Espacio listo para documentar como una gestion profesional mejoro el orden operativo, la convivencia y la confianza financiera.",
-    result: "Orden administrativo y percepcion de mayor control.",
+      "Espacio listo para documentar cómo una gestión profesional mejoró el orden operativo, la convivencia y la confianza financiera.",
+    result: "Orden administrativo y percepción de mayor control.",
   },
   {
-    title: "Caso 02 | Proyecto con enfoque en valorizacion",
+    title: "Caso 02 | Proyecto con enfoque en valorización",
     summary:
-      "Aqui podran contar el contexto, los retos, las decisiones tomadas y como eso ayudo a proteger el patrimonio.",
-    result: "Mejor lectura del activo y mas confianza para la toma de decisiones.",
+      "Aquí podrán contar el contexto, los retos, las decisiones tomadas y cómo eso ayudó a proteger el patrimonio.",
+    result: "Mejor lectura del activo y más confianza para la toma de decisiones.",
   },
   {
-    title: "Caso 03 | Gestion financiera y documental",
+    title: "Caso 03 | Gestión financiera y documental",
     summary:
-      "Ideal para explicar como se fortalecieron procesos, reportes y trazabilidad dentro de la copropiedad o proyecto.",
-    result: "Procesos mas claros, mayor seguimiento y mejor control interno.",
+      "Ideal para explicar cómo se fortalecieron procesos, reportes y trazabilidad dentro de la copropiedad o proyecto.",
+    result: "Procesos más claros, mayor seguimiento y mejor control interno.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Casos de exito",
+  title: "Casos de éxito",
   description:
-    "Pagina de casos de exito de Y.V. Group lista para documentar resultados, proyectos y transformaciones reales en Antioquia.",
+    "Página de casos de éxito de Y.V. Group lista para documentar resultados, proyectos y transformaciones reales en Antioquia.",
   alternates: {
     canonical: "/casos-de-exito",
   },
   openGraph: {
-    title: "Casos de exito | Y.V. Group",
+    title: "Casos de éxito | Y.V. Group",
     description:
-      "Conoce la estructura premium de casos de exito de Y.V. Group para mostrar resultados reales y generar mas confianza.",
+      "Conoce la estructura premium de casos de éxito de Y.V. Group para mostrar resultados reales y generar más confianza.",
     url: `${siteConfig.url}/casos-de-exito`,
   },
 };
@@ -50,13 +50,13 @@ export default function CasosDeExitoPage() {
       <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
         <ScrollReveal className="max-w-4xl">
           <p className="accent-text text-sm font-semibold uppercase tracking-[0.3em]">
-            Casos de exito
+            Casos de éxito
           </p>
           <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
-            Una pagina lista para demostrar resultados reales y cobrar con mas autoridad.
+            Una página lista para demostrar resultados reales y cobrar con más autoridad.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-            Cuando tu tia tenga material, aqui podran mostrar transformaciones,
+            Cuando tu tía tenga material, aquí podrán mostrar transformaciones,
             indicadores, retos y resultados para convertir visitas en confianza.
           </p>
         </ScrollReveal>
@@ -91,7 +91,7 @@ export default function CasosDeExitoPage() {
               Preparado para crecer
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
-              Cuando tengan los casos reales, esta pagina se convierte en una herramienta de venta muy fuerte.
+              Cuando tengan los casos reales, esta página se convierte en una herramienta de venta muy fuerte.
             </h2>
           </div>
           <TrackedLink

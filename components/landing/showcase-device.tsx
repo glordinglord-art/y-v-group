@@ -5,47 +5,47 @@ import { useRef, useState } from "react";
 
 const steps = [
   {
-    eyebrow: "Diagnostico",
+    eyebrow: "Diagnóstico",
     title: "Leemos el activo y detectamos prioridades reales.",
     description:
-      "El primer paso es entender el estado financiero, documental y operativo para tomar decisiones con mas claridad.",
-    chips: ["Revision inicial", "Mapeo de riesgo", "Prioridades criticas"],
+      "El primer paso es entender el estado financiero, documental y operativo para tomar decisiones con más claridad.",
+    chips: ["Revisión inicial", "Mapeo de riesgo", "Prioridades críticas"],
     primaryMetricLabel: "Estado operativo",
     primaryMetricValue: "Ordenado",
     secondaryMetricLabel: "Punto de partida",
     secondaryMetricValue: "360°",
-    panelTitle: "Vista de diagnostico",
+    panelTitle: "Vista de diagnóstico",
   },
   {
-    eyebrow: "Planeacion",
-    title: "Convertimos la administracion en una hoja de ruta clara.",
+    eyebrow: "Planeación",
+    title: "Convertimos la administración en una hoja de ruta clara.",
     description:
-      "Se estructura un plan de accion que alinea finanzas, cumplimiento, convivencia y valorizacion para dar continuidad.",
+      "Se estructura un plan de acción que alinea finanzas, cumplimiento, convivencia y valorización para dar continuidad.",
     chips: ["Hoja de ruta", "Control financiero", "Ley 675"],
     primaryMetricLabel: "Ruta definida",
     primaryMetricValue: "Activa",
     secondaryMetricLabel: "Cumplimiento",
     secondaryMetricValue: "Ley 675",
-    panelTitle: "Mapa estrategico",
+    panelTitle: "Mapa estratégico",
   },
   {
-    eyebrow: "Ejecucion",
+    eyebrow: "Ejecución",
     title: "El seguimiento continuo genera confianza visible.",
     description:
-      "Cada proceso se ejecuta con trazabilidad, reportes comprensibles y una lectura mas madura de la operacion diaria.",
+      "Cada proceso se ejecuta con trazabilidad, reportes comprensibles y una lectura más madura de la operación diaria.",
     chips: ["Seguimiento", "Reportes", "Transparencia"],
     primaryMetricLabel: "Trazabilidad",
     primaryMetricValue: "100%",
-    secondaryMetricLabel: "Decision",
+    secondaryMetricLabel: "Decisión",
     secondaryMetricValue: "Con data",
     panelTitle: "Panel de seguimiento",
   },
   {
-    eyebrow: "Valorizacion",
-    title: "La gestion premium se traduce en valor y reputacion.",
+    eyebrow: "Valorización",
+    title: "La gestión premium se traduce en valor y reputación.",
     description:
-      "Una buena administracion protege patrimonio, mejora percepcion de marca y deja mejor preparada la copropiedad para el futuro.",
-    chips: ["Valorizacion", "Convivencia", "Sostenibilidad"],
+      "Una buena administración protege patrimonio, mejora percepción de marca y deja mejor preparada la copropiedad para el futuro.",
+    chips: ["Valorización", "Convivencia", "Sostenibilidad"],
     primaryMetricLabel: "Impacto",
     primaryMetricValue: "Sostenido",
     secondaryMetricLabel: "Confianza",
@@ -89,8 +89,8 @@ export function ShowcaseDevice() {
               Un mockup premium que cuenta la historia mientras el usuario baja.
             </h2>
             <p className="theme-muted mt-6 max-w-xl text-lg leading-8">
-              La idea es que la pagina no solo se vea linda: que se sienta viva,
-              con una narrativa visual que haga ver la marca mas sofisticada y memorable.
+              La idea es que la página no solo se vea linda: que se sienta viva,
+              con una narrativa visual que haga ver la marca más sofisticada y memorable.
             </p>
 
             <div className="mt-10 grid gap-4">
@@ -133,7 +133,7 @@ export function ShowcaseDevice() {
                           key={`title-${steps[0].panelTitle}`}
                           className="theme-heading mt-2 text-lg font-semibold"
                         >
-                          Panel de administracion premium
+                          Panel de administración premium
                         </motion.p>
                       </div>
                       <div className="flex gap-2">

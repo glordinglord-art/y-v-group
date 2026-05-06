@@ -1,7 +1,7 @@
 'use client'
 
 import { TrackedLink } from "@/components/landing/tracked-link";
-import { ScrollStack, ScrollStackItem } from "@/components/react-bits/scroll-stack";
+import { Card, CardSwap } from "@/components/react-bits/card-swap";
 
 const sections = [
   {
@@ -79,77 +79,78 @@ export function HomeStoryPanel() {
           </div>
         </div>
 
-        <div className="relative hidden min-h-[760px] overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(12,12,12,0.9))] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.32)] backdrop-blur-2xl xl:block">
+        <div className="relative hidden min-h-[650px] overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(12,12,12,0.9))] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.32)] backdrop-blur-2xl xl:block">
           <div
             className="absolute -right-24 top-10 h-72 w-72 rounded-full blur-3xl"
             style={{ backgroundColor: "rgb(var(--accent-rgb) / 0.22)" }}
           />
           <div className="absolute left-6 top-6 z-10 max-w-sm">
             <p className="accent-text text-xs font-semibold uppercase tracking-[0.3em]">
-              ScrollStack
+              Áreas clave
             </p>
             <h3 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-white">
-              Lo esencial de Y.V. Group explicado con claridad.
+              La información se mueve sola, limpia y sin ruido.
             </h3>
           </div>
 
-          <div className="absolute inset-x-8 bottom-0 top-28">
-            <ScrollStack
-              itemDistance={80}
-              itemStackDistance={24}
-              baseScale={0.86}
-              itemScale={0.035}
-              rotationAmount={0.5}
-              blurAmount={0.25}
+          <div className="absolute bottom-12 right-8 h-[430px] w-[min(86vw,540px)]">
+            <CardSwap
+              width="min(82vw, 520px)"
+              height={390}
+              cardDistance={52}
+              verticalDistance={58}
+              delay={4300}
+              pauseOnHover
+              skewAmount={4}
             >
               {sections.map((section, index) => (
-                <ScrollStackItem
+                <Card
                   key={section.eyebrow}
-                  itemClassName="border border-white/10 bg-[linear-gradient(145deg,rgba(20,20,20,0.98),rgba(8,8,8,0.96))] text-white"
+                  className="border border-white/10 bg-[linear-gradient(145deg,rgba(20,20,20,0.98),rgba(8,8,8,0.96))] p-7 text-white shadow-[0_26px_80px_rgba(0,0,0,0.34)]"
                 >
-                  <div className="flex h-full flex-col justify-between gap-8">
+                  <div className="flex h-full flex-col justify-between">
                     <div>
                       <p className="accent-text text-xs font-semibold uppercase tracking-[0.3em]">
                         0{index + 1} {section.eyebrow}
                       </p>
-                      <h4 className="mt-5 max-w-2xl text-4xl font-semibold tracking-[-0.05em] text-white">
+                      <h4 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">
                         {section.title}
                       </h4>
-                      <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-300">
+                      <p className="mt-4 max-w-md text-base leading-7 text-zinc-300">
                         {section.description}
                       </p>
                     </div>
 
-                    <div className="flex items-end justify-between gap-8">
-                      <div>
-                        <p className="text-5xl font-semibold tracking-[-0.06em] text-white">
-                          {section.metric}
-                        </p>
-                        <div className="mt-5 flex flex-wrap gap-2">
-                          {section.chips.map((chip) => (
-                            <span
-                              key={chip}
-                              className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-2 text-[11px] uppercase tracking-[0.24em] text-white/70"
-                            >
-                              {chip}
-                            </span>
-                          ))}
-                        </div>
+                    <div>
+                      <p className="text-4xl font-semibold tracking-[-0.05em] text-white">
+                        {section.metric}
+                      </p>
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {section.chips.map((chip) => (
+                          <span
+                            key={chip}
+                            className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-2 text-[11px] uppercase tracking-[0.24em] text-white/70"
+                          >
+                            {chip}
+                          </span>
+                        ))}
                       </div>
-                      <TrackedLink
-                        href={section.href}
-                        className="accent-link inline-flex shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.05] px-5 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-white"
-                        style={{ borderColor: "rgb(var(--accent-rgb) / 0.18)" }}
-                        eventName={section.eventName}
-                        eventSection="home_scroll_stack"
-                      >
-                        Explorar ruta
-                      </TrackedLink>
+                      <div className="mt-6">
+                        <TrackedLink
+                          href={section.href}
+                          className="accent-link inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.05] px-5 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-white"
+                          style={{ borderColor: "rgb(var(--accent-rgb) / 0.18)" }}
+                          eventName={section.eventName}
+                          eventSection="home_card_swap_clean"
+                        >
+                          Explorar ruta
+                        </TrackedLink>
+                      </div>
                     </div>
                   </div>
-                </ScrollStackItem>
+                </Card>
               ))}
-            </ScrollStack>
+            </CardSwap>
           </div>
         </div>
 
@@ -164,15 +165,15 @@ export function HomeStoryPanel() {
               </h3>
               <p className="theme-muted mt-3 text-sm leading-6">{section.description}</p>
               <div className="mt-5 flex flex-wrap gap-2">
-                        {section.chips.map((chip) => (
-                          <span
-                            key={chip}
-                            className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-[11px] uppercase tracking-[0.24em] theme-muted"
-                          >
-                            {chip}
-                          </span>
-                        ))}
-                      </div>
+                {section.chips.map((chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-[11px] uppercase tracking-[0.24em] theme-muted"
+                  >
+                    {chip}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
